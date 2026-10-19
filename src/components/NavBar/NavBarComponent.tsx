@@ -70,7 +70,7 @@ const NavBarComponent = () => {
             <TopRow>
                 <LeftSection>
                     <User size={20} />
-                    <WelcomeText>Olá, Murilo!</WelcomeText>
+                    <WelcomeText>Olá, Usuário!</WelcomeText>
                 </LeftSection>
 
                 <CenterSection>
