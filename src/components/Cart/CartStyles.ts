@@ -13,7 +13,7 @@ export const CartOverlay = styled.div`
     justify-content: flex-end;
 `;
 
-export const CartPanel = styled.div`
+export const CartPanel = styled.div<{ $isOpen: boolean }>`
     width: 320px;
     height: 90vh;
     background-color: #fff;

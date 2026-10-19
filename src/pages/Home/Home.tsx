@@ -1,11 +1,9 @@
-import React from 'react';
 import BrandCardComponent from '../../components/Card/BrandCard/BrandCardComponent'
 import CardGroupComponent from '../../components/Card/CardGroup/CardGroupComponent'
 import CardProductImageComponent from '../../components/Card/CardProductImage/CardProductImageComponent'
 import ClothingComponent from '../../components/Card/ClothingCard/ClothingComponent'
 import { HomeContainer } from './HomeStyles'
 import { useStoreData } from '../../hooks/useStoreData';
-import type { Brand, Product, Banner } from '../../types/store';
 
 const Home = () => {
     const {

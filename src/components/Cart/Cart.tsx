@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { ShoppingBag, Trash2, Plus, Minus, X } from 'lucide-react';
 import { useCart } from '../../contexts/CartContext';
 import { formatBRL } from '../../utils/formatters';
