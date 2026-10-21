@@ -1,75 +1,76 @@
-# React + TypeScript + Vite
+# 👕 Bewear - E-commerce de Roupas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bewear é uma plataforma de e-commerce moderna e responsiva para venda de vestuário, desenvolvida com foco em performance, experiência do usuário e código limpo.
 
-Currently, two official plugins are available:
+**🌐 [Acesse o site ao vivo](https://bewear-lyart.vercel.app/)**
+**🔌 [API do Projeto](https://bewear-api.onrender.com/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+O projeto foi construído utilizando o ecossistema mais moderno de desenvolvimento frontend:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **[React 19](https://react.dev/)** - Biblioteca principal para construção da interface.
+- **[TypeScript](https://www.typescriptlang.org/)** - Tipagem estática para maior segurança e manutenibilidade.
+- **[Vite](https://vitejs.dev/)** - Tooling de build ultra rápido.
+- **[Styled Components](https://styled-components.com/)** - Estilização baseada em componentes (CSS-in-JS).
+- **[React Router Dom](https://reactrouter.com/)** - Gestão de navegação e rotas.
+- **[Lucide React](https://lucide.dev/)** - Conjunto de ícones leves e consistentes.
+- **Backend:** API REST hospedada no [Render](https://bewear-api.onrender.com/).
 
-## Expanding the ESLint configuration
+## 🛠️ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Catálogo Dinâmico:** Busca de produtos, marcas e banners via API.
+- **Sistema de Carrinho:** 
+  - Adição, remoção e atualização de quantidades.
+  - Persistência de itens utilizando `localStorage`.
+  - Cálculo de subtotal em tempo real.
+- **Navegação Fluida:** Rotas configuradas para Home e Detalhes do Produto.
+- **Interface Responsiva:** Design adaptável para diferentes tamanhos de tela (Mobile First).
+- **Gestão de Estado:** Uso de Context API para controle global do carrinho.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Como executar o projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pré-requisitos
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalação
 
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/bewear.git
+   cd bewear
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+### Execução
+
+Para rodar o projeto localmente:
+
+1. **Inicie o frontend:**
+   ```bash
+   npm run dev
+   ```
+
+O projeto estará disponível em `http://localhost:5173`. O frontend já está conectado automaticamente à API de produção.
+
+## 📁 Estrutura de Pastas
+
+```text
+src/
+├── components/    # Componentes reutilizáveis (Botões, Cards, NavBar, etc)
+├── contexts/      # Contextos de estado global (ex: CartContext)
+├── hooks/         # Hooks personalizados (ex: useStoreData)
+├── pages/         # Páginas da aplicação (Home, Product)
+├── routes/        # Configuração de rotas do sistema
+├── services/       # Integrações com API/Backend
+├── types/         # Definições de tipos TypeScript
+└── utils/         # Funções utilitárias e formatadores
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 📄 Licença
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Este projeto está sob a licença MIT.
